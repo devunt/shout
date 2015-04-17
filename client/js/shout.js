@@ -328,11 +328,11 @@ $(function() {
 	var settings = $("#settings");
 	var options = $.extend({
 		badge: false,
-		colors: false,
+		colors: true,
 		join: true,
 		links: true,
 		mode: true,
-		motd: false,
+		motd: true,
 		nick: true,
 		notification: true,
 		part: true,
@@ -477,7 +477,7 @@ $(function() {
 			.sticky()
 			.end();
 
-		var title = "Shout";
+		var title = "Ozinger Web IRC";
 		if (chan.data("title")) {
 			title = chan.data("title") + " — " + title;
 		}

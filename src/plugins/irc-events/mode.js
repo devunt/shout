@@ -4,7 +4,7 @@ var Msg = require("../../models/msg");
 module.exports = function(irc, network) {
 	var client = this;
 	irc.on("mode", function(data) {
-		var chan = _.findWhere(network.channels, {name: data.target});
+		var chan = _.findWhere(network.channels, {name: data.target.toLowerCase()});
 		if (typeof chan !== "undefined") {
 			setTimeout(function() {
 				irc.write("NAMES " + data.target);

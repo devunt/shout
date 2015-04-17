@@ -123,9 +123,9 @@ Client.prototype.connect = function(args) {
 	var config = Helper.getConfig();
 	var client = this;
 	var server = {
-		name: args.name || "",
-		host: args.host || "irc.freenode.org",
-		port: args.port || (args.tls ? 6697 : 6667),
+		name: args.name || "Ozinger",
+		host: args.host || "127.0.0.1",
+		port: args.port || (args.tls ? 16667 : 6667),
 		rejectUnauthorized: false
 	};
 
@@ -151,9 +151,9 @@ Client.prototype.connect = function(args) {
 		});
 	});
 
-	var nick = args.nick || "shout-user";
+	var nick = args.nick || "WebIRCUser";
 	var username = args.username || nick.replace(/[^a-zA-Z0-9]/g, '');
-	var realname = args.realname || "Shout User";
+	var realname = args.realname || "Ozinger Web IRC";
 
 	var irc = slate(stream);
 	identd.hook(stream, username);
