@@ -28,6 +28,18 @@ shout --help
 
 For more information, read the [documentation](http://shout-irc.com/docs/).
 
+## Development setup
+
+To run the app from source, just clone the code and run this in your terminal:
+
+```
+npm install
+grunt
+./index.js --port 8080
+```
+
+And if you don't have [grunt](http://gruntjs.com/getting-started) installed already, just run `npm install -g grunt-cli`.
+
 ## License
 
 Available under [the MIT license](http://mths.be/mit).
