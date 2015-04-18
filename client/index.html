@@ -28,13 +28,13 @@
 			<div class="tse-content">
 				<div class="networks"></div>
 				<div class="empty">
-					You're not connected to any networks yet.
+					아직 접속하지 않았습니다.
 				</div>
 			</div>
 		</aside>
 		<footer id="footer">
-			<button class="icon connect" data-target="#connect" data-title="Connect" data-placement="top" title="Connect to network"></button>
-			<button class="icon settings" data-target="#settings" data-title="Settings" data-placement="top" title="Client settings"></button>
+			<button class="icon connect" data-target="#connect" data-title="Connect" data-placement="top" title="서버에 접속"></button>
+			<button class="icon settings" data-target="#settings" data-title="Settings" data-placement="top" title="클라이언트 설정"></button>
 		</footer>
 		<div id="main">
 			<div id="windows">
@@ -49,17 +49,17 @@
 								<h1 class="title">Ozinger Web IRC</h1>
 							</div>
 							<div class="col-sm-12">
-								<h2>Connect</h2>
+								<h2>접속 정보</h2>
 							</div>
 							<div class="col-sm-3">
-								<label>Nick</label>
+								<label>닉네임</label>
 							</div>
 							<div class="col-sm-5">
 								<input class="input nick" name="nick" value="<%= defaults.nick %>">
 							</div>
 							<div class="clearfix"></div>
 							<div class="col-sm-3">
-								<label>Channels</label>
+								<label>접속할 채널</label>
 							</div>
 							<div class="col-sm-9">
 								<input class="input" name="join" class="input" value="<%= defaults.join %>">
@@ -67,7 +67,7 @@
 							<div class="col-sm-3 clearfix"></div>
 							<div class="col-sm-9">
 								<button type="submit" class="btn">
-									Connect
+									접속하기
 								</button>
 							</div>
 						</div>
@@ -80,91 +80,91 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-sm-12">
-								<h1 class="title">Settings</h1>
+								<h1 class="title">설정</h1>
 							</div>
 							<div class="col-sm-12">
-								<h2>Messages</h2>
+								<h2>채팅</h2>
 							</div>
 							<div class="col-sm-6">
 								<label class="opt">
 									<input type="checkbox" name="join">
-									Show joins
+									채널 입장 표시
 								</label>
 							</div>
 							<div class="col-sm-6">
 								<label class="opt">
 									<input type="checkbox" name="motd">
-									Show motd
+									MOTD 표시
 								</label>
 							</div>
 							<div class="col-sm-6">
 								<label class="opt">
 									<input type="checkbox" name="part">
-									Show parts
+									채널 퇴장 표시
 								</label>
 							</div>
 							<div class="col-sm-6">
 								<label class="opt">
 									<input type="checkbox" name="nick">
-									Show nick changes
+									닉네임 변경 표시
 								</label>
 							</div>
 							<div class="col-sm-6">
 								<label class="opt">
 									<input type="checkbox" name="mode">
-									Show mode
+									모드 변경 표시
 								</label>
 							</div>
 							<div class="col-sm-6">
 								<label class="opt">
 									<input type="checkbox" name="quit">
-									Show quits
+									연결 종료 표시
 								</label>
 							</div>
 							<div class="col-sm-12">
-								<h2>Visual Aids</h2>
+								<h2>시각 효과</h2>
 							</div>
 							<div class="col-sm-12">
 								<label class="opt">
 									<input type="checkbox" name="colors">
-									Enable colored nicknames
+									닉네임에 색깔 입히기
 								</label>
 							</div>
 							<% if (typeof prefetch === "undefined" || prefetch !== false) { %>
 							<div class="col-sm-12">
-								<h2>Links and URLs</h2>
+								<h2>이미지와 링크</h2>
 							</div>
 							<div class="col-sm-6">
 								<label class="opt">
 									<input type="checkbox" name="thumbnails">
-									Auto-expand thumbnails
+									이미지 미리보기 활성화
 								</label>
 							</div>
 							<div class="col-sm-6">
 								<label class="opt">
 									<input type="checkbox" name="links">
-									Auto-expand links
+									링크 미리보기 활성화
 								</label>
 							</div>
 							<% } %>
 							<div class="col-sm-12">
-								<h2>Notifications</h2>
+								<h2>알림</h2>
 							</div>
 							<div class="col-sm-12">
 								<label class="opt">
 								<input id="badge" type="checkbox" name="badge">
-								Enable badge
+								알림 뱃지 사용하기
 								</label>
 							</div>
 							<div class="col-sm-12">
 								<label class="opt">
 								<input type="checkbox" name="notification">
-								Enable notification sound
+								알림 효과음 사용하기
 								</label>
 							</div>
 							<div class="col-sm-12">
 								<div class="opt">
-									<button id="play">Play sound</button>
+									<button id="play">효과음 들어보기</button>
 								</div>
 							</div>
 							<div class="col-sm-12">
@@ -183,7 +183,7 @@
 			<form id="form" action="">
 				<div class="inner">
 					<button id="submit" type="submit">
-						Send
+						보내기
 					</button>
 					<div class="input">
 						<label for="input" id="nick"></label>
