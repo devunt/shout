@@ -7,11 +7,11 @@ var Helper = require("../helper");
 
 program
 	.command("config")
-	.description("Edit config: '" + Helper.HOME + "/config.js'")
+	.description("Edit config: '" + __dirname + "/../../config.js'")
 	.action(function() {
 		child.spawn(
 			process.env.EDITOR || "vi",
-			[Helper.HOME + "/config.js"],
+			[__dirname + "/../../config.js"],
 			{stdio: "inherit"}
 		);
 	});

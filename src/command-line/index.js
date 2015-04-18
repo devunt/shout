@@ -21,7 +21,7 @@ if (program.home) {
 	Helper.HOME = program.home;
 }
 
-var config = Helper.HOME + "/config.js";
+var config = __dirname + "/../../config.js";
 if (!fs.existsSync(config)) {
 	mkdirp.sync(Helper.HOME);
 	fs.writeFileSync(
