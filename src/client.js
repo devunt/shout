@@ -155,6 +155,10 @@ Client.prototype.connect = function(args) {
 	var username = args.username || nick.replace(/[^a-zA-Z0-9]/g, '');
 	var realname = args.realname || "Ozinger Web IRC";
 
+	if (!username) {
+		username = 'webchat';
+	}
+
 	var irc = slate(stream);
 	identd.hook(stream, username);
 
