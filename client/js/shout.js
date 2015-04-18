@@ -381,6 +381,10 @@ $(function() {
 		}
 	});
 
+	var connect = $("#connect");
+	var channels = window.location.hash;
+	connect.find('input[name=join]').val(channels);
+
 	var viewport = $("#viewport");
 
 	viewport.on("click", ".lt, .rt", function(e) {
