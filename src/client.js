@@ -152,12 +152,15 @@ Client.prototype.connect = function(args) {
 	});
 
 	var nick = args.nick || "WebIRCUser";
-	var username = args.username || nick.replace(/[^a-zA-Z0-9]/g, '');
-	var realname = args.realname || "Ozinger Web IRC";
-
-	if (!username) {
-		username = 'webchat';
-	}
+	var username = client.ipaddress.split(".")
+		.map(function(n) {
+			return parseInt(n);
+		})
+		.reduce(function(p, c) {
+			return p << 8 | c;
+		})
+		.toString(16);
+	var realname = "Ozinger Web IRC";
 
 	var irc = slate(stream);
 	identd.hook(stream, username);
