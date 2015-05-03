@@ -121,7 +121,7 @@ function init(socket, client, token) {
 				client.sort(data);
 			}
 		);
-		client.ipaddress = socket.handshake.address.address;
+		client.ipaddress = socket.handshake.headers['x-forwarded-for'] || socket.handshake.address.address;
 		socket.join(client.id);
 		socket.emit("init", {
 			active: client.activeChannel,
