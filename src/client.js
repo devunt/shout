@@ -152,13 +152,13 @@ Client.prototype.connect = function(args) {
 	});
 
 	var nick = args.nick || "WebIRCUser";
-	var username = client.ipaddress.split(".")
+	var username = (client.ipaddress.split(".")
 		.map(function(n) {
 			return parseInt(n);
 		})
 		.reduce(function(p, c) {
 			return p << 8 | c;
-		})
+		}) & 0xffffffff)
 		.toString(16);
 	var realname = "Ozinger Web IRC";
 
