@@ -465,8 +465,19 @@ $(function() {
 	});
 
 	var connect = $("#connect");
+	var channelbox = connect.find('input[name=join]');
+	var channellink = $("#channellink");
+
 	var channels = window.location.hash;
-	connect.find('input[name=join]').val(channels);
+	channelbox.val(channels);
+
+	channelbox.on("input propertychange paste", function(e) {
+		var channelname = channelbox.val();
+		if (channelname == "") url = "";
+		else url = "http://webchat.ozinger.org/" + channelname;
+		channellink.attr("href", url);
+		channellink.html(url);
+	});
 
 	var viewport = $("#viewport");
 
