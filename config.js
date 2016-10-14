@@ -16,7 +16,7 @@ module.exports = {
 	// @type     string
 	// @default  "0.0.0.0"
 	//
-	host: "0.0.0.0",
+	host: "127.0.0.1",
 
 	//
 	// Set the port to listen on.
@@ -32,7 +32,7 @@ module.exports = {
 	// @type     string
 	// @default  "0.0.0.0"
 	//
-	bind: "0.0.0.0",
+	bind: "127.0.0.1",
 
 	//
 	// Set the default theme.
