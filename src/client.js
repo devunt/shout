@@ -159,7 +159,7 @@ Client.prototype.connect = function(args) {
 		})
 		.reduce(function(p, c) {
 			return p << 8 | c;
-		}) & 0xffffffff)
+		}) >>> 0)
 		.toString(16);
 	var realname = "Ozinger Web IRC";
 
