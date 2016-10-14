@@ -6,5 +6,5 @@ module.exports = {
 };
 
 function getConfig() {
-	return require(__dirname + "/../config");
-};
+	return require(path.resolve(this.HOME) + "/config");
+}
